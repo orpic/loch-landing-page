@@ -119,7 +119,11 @@ const NotificationSettingTwo = () => {
       </div>
       <div className="bg-[#E5E5E6] w-fit flex items-center justify-center p-1 rounded-sm ml-3 mt-4">
         <p className="text-[#313233] text-xs">$1,000.00</p>
-        <img src={images.triangleDown} alt="bell" />
+        <img
+          src={images.triangleDown}
+          alt="down arrow triangle"
+          className="mt-[1px]"
+        />
       </div>
     </div>
   );
@@ -137,7 +141,11 @@ const NotificationSettingThree = () => {
       </div>
       <div className="bg-[#E5E5E6] w-fit flex items-center justify-center p-1 rounded-sm ml-3 mt-1">
         <p className="text-[#313233] text-xs">&#62; 30 days</p>
-        <img src={images.triangleDown} alt="bell" />
+        <img
+          src={images.triangleDown}
+          alt="down arrow triangle"
+          className="mt-[1px]"
+        />
       </div>
       <div className="px-3 mt-1">
         <p className="text-xs">becomes active</p>
