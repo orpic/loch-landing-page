@@ -46,7 +46,7 @@ const Showcase = () => {
             className="ml-32 xl:ml-16  w-[24rem] aspect-auto lg900:mx-auto md630:p-2"
           />
         </div>
-        <div className="flex flex-col w-96 lg900:w-3/4 items-end mr-24 xl:mr-16 lg900:items-start lg900:ml-16 md630:mx-auto md630:w-11/12">
+        <div className="flex flex-col w-full lg900:w-3/4 items-end mr-24 xl:mr-16 lg900:items-start lg900:ml-16 md630:mx-auto md630:w-11/12">
           <img
             src={images.eye}
             alt="eye"
