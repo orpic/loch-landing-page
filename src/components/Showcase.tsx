@@ -75,7 +75,7 @@ const Showcase = () => {
           Testimonials
         </p>
         <hr className="mx-24 xl:mx-16 md630:mx-auto md630:w-11/12" />
-        <div className="flex ml-24 xl:ml-16 lg900:flex-col-reverse md630:mx-auto md630:w-11/12 mb-12">
+        <div className="flex ml-24 xl:ml-16 lg900:flex-col-reverse md630:mx-auto md630:w-11/12 xl:mb-12">
           <div className="mt-auto lg900:my-8 ">
             <img src={images.lochLogo} alt="loch" className="w-16 mr-4" />
           </div>
@@ -99,7 +99,9 @@ const NotificationSettingOne = () => {
         <p className="">We'll be sending notifications to you here</p>
       </div>
       <div className="">
-        <div className="bg-white ring-1 ring-[#D4D4D4] p-4 mx-3 rounded-md"></div>
+        <div className="bg-white ring-1 ring-[#D4D4D4] p-1.5 mx-3 rounded-md text-[#19191A] text-sm pl-2">
+          hello@gmail.com
+        </div>
       </div>
     </div>
   );
