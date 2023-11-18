@@ -153,8 +153,10 @@ const Testimonials = () => {
     scrollLeft: 0,
     scrollTop: 0,
   });
+  // @ts-expect-error: Ignore TypeScript error for next line
   const handleDragStart = (e) => {
     if (!ourRef.current) return;
+    // @ts-expect-error: Ignore TypeScript error for next line
     const slider = ourRef.current.children[0];
     const startX = e.pageX - slider.offsetLeft;
     const startY = e.pageY - slider.offsetTop;
@@ -169,9 +171,11 @@ const Testimonials = () => {
     if (!ourRef.current) return;
     document.body.style.cursor = "default";
   };
+  // @ts-expect-error: Ignore TypeScript error for next line
   const handleDrag = (e) => {
     if (!isMouseDown || !ourRef.current) return;
     e.preventDefault();
+    // @ts-expect-error: Ignore TypeScript error for next line
     const slider = ourRef.current.children[0];
     const x = e.pageX - slider.offsetLeft;
     const y = e.pageY - slider.offsetTop;
