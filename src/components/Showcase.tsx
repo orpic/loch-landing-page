@@ -1,13 +1,17 @@
-import { MouseEvent, useRef, useState } from "react";
+import { useRef, useState } from "react";
 import { images } from "../assets";
 
 const Showcase = () => {
   return (
-    <section className="basis-7/12  h-screen custom-gradient flex flex-col font-newInterFont">
-      <div className="flex flex-row">
+    <div className="overflow-y-auto h-screen">
+      <div className="flex flex-row  lg900:flex-col">
         {/* BLOCK 1 */}
-        <div className="w-[22rem] text-[#F2F2F2] font-medium ml-32 mt-10">
-          <img src={images.bell} alt="notification bell" className="mb-4" />
+        <div className="w-[22rem] lg900:w-3/4 text-[#F2F2F2] font-medium ml-32 xl:ml-16 mt-10 md630:mx-auto md630:w-11/12">
+          <img
+            src={images.bell}
+            alt="notification bell"
+            className="mb-4 lg900:mb-2"
+          />
           <p className=" text-3xl mb-4 shadow-custom ">
             Get notified when a highly correlated whale makes a move
           </p>
@@ -17,7 +21,7 @@ const Showcase = () => {
           </p>
         </div>
         {/* BLOCK 2 */}
-        <div className="ml-auto h-44">
+        <div className="ml-auto lg900:mx-auto lg900:-mt-6 h-44 ">
           <div className="w-96 h-full carousel-container ">
             <div className="w-full flex  gap-12 no-scrollbar carousel-track">
               <NotificationSettingOne />
@@ -34,40 +38,51 @@ const Showcase = () => {
         </div>
       </div>
       {/* ROW 2 */}
-      <div className=" flex justify-between items-center mt-12">
-        <div>
+      <div className=" flex justify-between items-center mt-12 lg900:flex-col-reverse lg900:items-start ">
+        <div className="w-full">
           <img
             src={images.cohort2x}
             alt="cohort"
-            className="ml-32 w-[24rem] aspect-auto"
+            className="ml-32 xl:ml-16  w-[24rem] aspect-auto lg900:mx-auto md630:p-2"
           />
         </div>
-        <div className="flex flex-col w-96 items-end mr-24">
-          <img src={images.eye} alt="eye" className="w-fit mb-4 -mt-2" />
-          <p className="text-3xl text-[#F2F2F2] text-right w-64 mb-6">
+        <div className="flex flex-col w-96 lg900:w-3/4 items-end mr-24 xl:mr-16 lg900:items-start lg900:ml-16 md630:mx-auto md630:w-11/12">
+          <img
+            src={images.eye}
+            alt="eye"
+            className="w-fit mb-4 -mt-2 lg900:mt-10 lg900:mb-2"
+          />
+          <p className="text-3xl text-[#F2F2F2] text-right w-64 lg900:w-full mb-6 lg900:text-left lg900:mb-2">
             Watch what the whales are doing
           </p>
-          <div className=" text-right text-[#F2F2F2] text-lg">
-            <p className="">All whales are not equal. Know exactly</p>
-            <p className="">what the whales impacting YOUR</p>
-            <p className="">portfolio are doing.</p>
+          <div className=" text-right text-[#F2F2F2] text-lg lg900:text-left">
+            <p className="hidden lg900:block lg900:mb-4">
+              All whales are not equal. Know exactly what the whales impacting
+              YOUR portfolio are doing.
+            </p>
+
+            <p className="lg900:hidden">
+              All whales are not equal. Know exactly
+            </p>
+            <p className="lg900:hidden">what the whales impacting YOUR</p>
+            <p className="lg900:hidden">portfolio are doing.</p>
           </div>
         </div>
       </div>
       {/* ROW 3 */}
-      <div className="mt-2">
-        <p className="text-[#F2F2F2] font-medium text-2xl text-right mr-24 mb-2">
+      <div className="mt-2 ">
+        <p className="text-[#F2F2F2] font-medium text-2xl text-right mr-24 xl:mr-16 mb-2 lg900:text-left lg900:ml-16 md630:mx-auto md630:w-11/12">
           Testimonials
         </p>
-        <hr className="mx-24" />
-        <div className="flex ml-24">
-          <div className="mt-auto">
-            <img src={images.lochLogo} alt="loch" className="w-16 " />
+        <hr className="mx-24 xl:mx-16 md630:mx-auto md630:w-11/12" />
+        <div className="flex ml-24 xl:ml-16 lg900:flex-col-reverse md630:mx-auto md630:w-11/12 mb-12">
+          <div className="mt-auto lg900:my-8 ">
+            <img src={images.lochLogo} alt="loch" className="w-16 mr-4" />
           </div>
           <Testimonials />
         </div>
       </div>
-    </section>
+    </div>
   );
 };
 
@@ -173,46 +188,46 @@ const Testimonials = () => {
       onMouseDown={handleDragStart}
       onMouseUp={handleDragEnd}
       onMouseMove={handleDrag}
-      className="w-[750px] overflow-hidden mt-4 ml-auto mr-24 overflow-x-auto"
+      className="w-[750px]  mt-4 ml-auto mr-24 xl:mr-16 overflow-x-auto  no-scrollbar lg900:w-full lg900:mx-0 md630:pointer-events-none"
     >
-      <div className="w-[750px] overflow-x-auto no-scrollbar">
-        <div className=" flex gap-x-4 ">
+      <div className="w-[750px] overflow-x-auto no-scrollbar lg900:w-screen lg900:mx-0">
+        <div className=" flex gap-x-4 md630:flex-col md630:gap-4">
           {/* Each testimonial */}
-          <div className="w-80 p-3 bg-white rounded-xl flex-shrink-0">
+          <div className="w-80 p-3 bg-white rounded-xl flex-shrink-0 md630:w-11/12">
             <p className="text-[#19191A] font-bold mb-4 ">
               <span>Jack F</span>&nbsp;
               <span className="font-normal  text-xs  text-[#96979A]">
                 Ex Blackrock PM
               </span>
             </p>
-            <p className="line-clamp-3">
+            <p className="line-clamp-3 md630:line-clamp-6">
               “Love how Loch integrates portfolio analytics and whale watching
               into one unified app.”
             </p>
           </div>
           {/* Each testimonial */}
-          <div className="w-[22rem] p-3 bg-white rounded-xl flex-shrink-0">
+          <div className="w-[22rem] p-3 bg-white rounded-xl flex-shrink-0 md630:w-11/12">
             <p className="text-[#19191A] font-bold mb-4 ">
               <span>Yash P</span>&nbsp;
               <span className="font-normal  text-xs  text-[#96979A]">
                 Research, 3poch Crypto Hedge Fund
               </span>
             </p>
-            <p className="line-clamp-3">
+            <p className="line-clamp-3 md630:line-clamp-6">
               <span>“</span>I use Loch everyday now. I don't think I could
               analyze crypto whale trends markets without it. I'm addicted!.
               <span>”</span>
             </p>
           </div>
           {/* Each testimonial */}
-          <div className="w-[32rem] p-3 bg-white rounded-xl flex-shrink-0">
+          <div className="w-[32rem] p-3 bg-white rounded-xl flex-shrink-0 md630:w-11/12">
             <p className="text-[#19191A] font-bold mb-4 ">
               <span>Shiv S</span>&nbsp;
               <span className="font-normal  text-xs  text-[#96979A]">
                 Co-Founder Magik Labs
               </span>
             </p>
-            <p className="line-clamp-3">
+            <p className="line-clamp-3 md630:line-clamp-6">
               <span>“</span>Managing my own portfolio is helpful and well
               designed. What's really interesting is watching the whales though.
               No one else has made whale tracking so simple.

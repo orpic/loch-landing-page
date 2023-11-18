@@ -9,10 +9,13 @@ export default {
       xl: { max: "1360px" },
       // => @media (max-width: 1279px) { ... }
 
-      lg: { max: "1023px" },
+      xl1300: { max: "1300px" },
+      // => @media (max-width: 1279px) { ... }
+
+      lg900: { max: "910px" },
       // => @media (max-width: 1023px) { ... }
 
-      md: { max: "767px" },
+      md630: { max: "630px" },
       // => @media (max-width: 767px) { ... }
 
       sm: { max: "639px" },

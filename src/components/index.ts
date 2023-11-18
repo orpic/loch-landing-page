@@ -1,4 +1,4 @@
-import SignUp from "./SignUp";
+import CoreSignUp from "./CoreSignUp";
 import Showcase from "./Showcase";
 
-export { SignUp, Showcase };
+export { Showcase, CoreSignUp };
